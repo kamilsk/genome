@@ -2,13 +2,6 @@
 >
 > Build your app by DNA.
 
-[![Patreon][icon_patreon]](https://www.patreon.com/octolab)
-[![License][icon_license]](LICENSE)
-
-## Motivation
-
-...
-
 ## The concept
 
 ```bash
@@ -20,6 +13,10 @@ life:
   died: 14 February 2003
 YAML
 ```
+
+## Motivation
+
+...
 
 ## How to
 
@@ -44,6 +41,3 @@ $ brew install kamilsk/tap/genome
 ---
 
 made with ❤️ for everyone
-
-[icon_license]: https://img.shields.io/badge/license-MIT-blue.svg
-[icon_patreon]: https://img.shields.io/badge/patreon-donate-orange.svg
