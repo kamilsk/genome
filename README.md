@@ -2,6 +2,8 @@
 >
 > Build your app by DNA.
 
+[![Build Status][icon_build]][page_build]
+
 ## The concept
 
 ```bash
@@ -41,3 +43,8 @@ $ brew install kamilsk/tap/genome
 ---
 
 made with ❤️ for everyone
+
+[icon_build]:      https://travis-ci.org/kamilsk/genome.svg?branch=master
+
+[page_build]:      https://travis-ci.org/kamilsk/genome
+[page_promo]:      https://github.com/kamilsk/genome
