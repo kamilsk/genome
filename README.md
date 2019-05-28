@@ -38,23 +38,16 @@ $ brew install kamilsk/tap/genome
 ### Binary
 
 ```bash
-$ REQ_VER=0.0.1  # all available versions are on https://github.com/kamilsk/genome/releases/
-$ REQ_OS=Linux   # macOS is also available
-$ REQ_ARCH=64bit # 32bit is also available
-# wget -q -O genome.tar.gz
-$ curl -sL -o genome.tar.gz \
-       https://github.com/kamilsk/genome/releases/download/"${REQ_VER}/genome_${REQ_VER}_${REQ_OS}-${REQ_ARCH}".tar.gz
-$ tar xf genome.tar.gz -C "${GOPATH}"/bin/ && rm genome.tar.gz
+$ curl -sfL https://bit.ly/install-genome | bash
 ```
 
-### From source code
+### Source
 
 ```bash
-# using standard go tools
+# use standard go tools
 $ go get -u github.com/kamilsk/genome
-# or using egg tool
+# or use egg tool
 $ egg github.com/kamilsk/genome -- go install .
-# with mirror
 $ egg bitbucket.org/kamilsk/genome -- go install .
 ```
 
@@ -63,8 +56,8 @@ $ egg bitbucket.org/kamilsk/genome -- go install .
 ### Bash and Zsh completions
 
 ```bash
-$ genome completion -f bash > /path/to/bash_completion.d/genome.sh
-$ genome completion -f zsh  > /path/to/zsh-completions/_genome.zsh
+$ genome completion bash > /path/to/bash_completion.d/genome.sh
+$ genome completion zsh  > /path/to/zsh-completions/_genome.zsh
 ```
 
 <sup id="egg">1</sup> The project is still in prototyping.[↩](#anchor-egg)
