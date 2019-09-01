@@ -2,7 +2,7 @@
 >
 > Build your app by DNA.
 
-[![Build Status][icon_build]][page_build]
+[![Build][icon_build]][page_build]
 
 ## 💡 Idea
 
@@ -16,8 +16,7 @@ life:
 YAML
 ```
 
-Full description of the idea is available
-[here](https://www.notion.so/octolab/genome-794781effdae4278ac6bc92637cbf74c?r=0b753cbf767346f5a6fd51194829a2f3).
+Full description of the idea is available [here][design].
 
 ## 🏆 Motivation
 
@@ -51,7 +50,7 @@ $ egg github.com/kamilsk/genome -- go install .
 $ egg bitbucket.org/kamilsk/genome -- go install .
 ```
 
-> [egg][page_egg]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
+> [egg][]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
 
 ### Bash and Zsh completions
 
@@ -66,8 +65,10 @@ $ genome completion zsh  > /path/to/zsh-completions/_genome.zsh
 
 made with ❤️ for everyone
 
-[icon_build]:      https://travis-ci.org/kamilsk/genome.svg?branch=master
+[icon_build]:       https://travis-ci.org/kamilsk/genome.svg?branch=master
 
-[page_build]:      https://travis-ci.org/kamilsk/genome
-[page_promo]:      https://github.com/kamilsk/genome
-[page_egg]:        https://github.com/kamilsk/egg
+[page_build]:       https://travis-ci.org/kamilsk/genome
+[page_promo]:       https://github.com/kamilsk/genome
+
+[egg]:              https://github.com/kamilsk/egg
+[design]:           https://www.notion.so/octolab/genome-794781effdae4278ac6bc92637cbf74c?r=0b753cbf767346f5a6fd51194829a2f3
