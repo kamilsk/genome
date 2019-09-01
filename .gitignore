@@ -1,6 +1,6 @@
 # code coverage and quality reports
 *.out
 
-# binary
+# binaries
 /bin/*
 !/bin/.gitkeep

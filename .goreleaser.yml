@@ -10,8 +10,8 @@ archives:
     darwin: macOS
     linux:  Linux
 
-brew:
-  name: genome
+brews:
+- name: genome
   caveats: Use `genome clone src dst`
   description: Build your app by DNA.
   homepage: https://github.com/kamilsk/genome
@@ -23,8 +23,8 @@ brew:
     name:  homebrew-tap
     owner: kamilsk
 
-build:
-  binary: genome
+builds:
+- binary: genome
   env:
   - CGO_ENABLED=0
   goarch:
