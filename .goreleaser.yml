@@ -12,7 +12,6 @@ archives:
 
 brews:
 - name: genome
-  caveats: Use `genome clone src dst`
   description: Build your app by DNA.
   homepage: https://github.com/kamilsk/genome
   commit_author:
