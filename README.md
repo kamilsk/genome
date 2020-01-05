@@ -2,7 +2,8 @@
 >
 > Build your app by DNA.
 
-[![Build][icon_build]][page_build]
+[![Build][build.icon]][build.page]
+[![Template][template.icon]][template.page]
 
 ## 💡 Idea
 
@@ -16,7 +17,7 @@ life:
 YAML
 ```
 
-Full description of the idea is available [here][design].
+Full description of the idea is available [here][design.page].
 
 ## 🏆 Motivation
 
@@ -37,7 +38,9 @@ $ brew install kamilsk/tap/genome
 ### Binary
 
 ```bash
-$ curl -sfL https://bit.ly/install-genome | bash
+$ curl -sSL https://bit.ly/install-genome | sh
+# or
+$ wget -qO- https://bit.ly/install-genome | sh
 ```
 
 ### Source
@@ -46,11 +49,10 @@ $ curl -sfL https://bit.ly/install-genome | bash
 # use standard go tools
 $ go get -u github.com/kamilsk/genome
 # or use egg tool
-$ egg github.com/kamilsk/genome -- go install .
-$ egg bitbucket.org/kamilsk/genome -- go install .
+$ egg tools add github.com/kamilsk/genome
 ```
 
-> [egg][]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
+> [egg][egg.page]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
 
 ### Bash and Zsh completions
 
@@ -65,10 +67,14 @@ $ genome completion zsh  > /path/to/zsh-completions/_genome.zsh
 
 made with ❤️ for everyone
 
-[icon_build]:       https://travis-ci.org/kamilsk/genome.svg?branch=master
+[build.icon]:       https://travis-ci.org/kamilsk/genome.svg?branch=master
+[build.page]:       https://travis-ci.org/kamilsk/genome
 
-[page_build]:       https://travis-ci.org/kamilsk/genome
-[page_promo]:       https://github.com/kamilsk/genome
+[design.page]:      https://www.notion.so/octolab/genome-794781effdae4278ac6bc92637cbf74c?r=0b753cbf767346f5a6fd51194829a2f3
 
-[egg]:              https://github.com/kamilsk/egg
-[design]:           https://www.notion.so/octolab/genome-794781effdae4278ac6bc92637cbf74c?r=0b753cbf767346f5a6fd51194829a2f3
+[promo.page]:       https://github.com/kamilsk/genome
+
+[template.page]:    https://github.com/octomation/go-tool
+[template.icon]:    https://img.shields.io/badge/template-go--tool-blue
+
+[egg.page]:         https://github.com/kamilsk/egg
