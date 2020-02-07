@@ -1,5 +1,8 @@
+---
+project_name: genome
+
 archives:
-- id: binary
+- id: genome
   files:
   - LICENSE
   format: tar.gz
@@ -12,15 +15,24 @@ archives:
 
 brews:
 - name: genome
-  description: Build your app by DNA.
-  homepage: https://github.com/kamilsk/genome
   commit_author:
     name:  Kamil Samigullin
     email: kamil@samigullin.info
+  description: Build your app by DNA.
   folder: Formula
+  homepage: https://github.com/kamilsk/genome
   github:
-    name:  homebrew-tap
     owner: kamilsk
+    name:  homebrew-tap
+  install: |
+    bin.install "genome"
+    output = Utils.popen_read("#{bin}/genome completion bash")
+    (bash_completion/"genome").write output
+    output = Utils.popen_read("#{bin}/genome completion zsh")
+    (zsh_completion/"_genome").write output
+    prefix.install_metafiles
+  test: |
+    system "#{bin}/genome --version"
 
 builds:
 - binary: genome
@@ -38,7 +50,6 @@ builds:
 checksum: { name_template: checksums.txt }
 
 release:
-  draft: false
   github:
-    name:  genome
     owner: kamilsk
+    name:  genome

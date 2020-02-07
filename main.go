@@ -5,11 +5,12 @@ import (
 	_ "go.octolab.org/toolkit/cli/cobra"
 )
 
+const unknown = "unknown"
+
 var (
-	commit  = "none"
-	date    = "unknown"
+	commit  = unknown
+	date    = unknown
 	version = "dev"
 )
 
-func main() {
-}
+func main() {}
