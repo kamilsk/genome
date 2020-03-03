@@ -38,21 +38,21 @@ $ brew install kamilsk/tap/genome
 ### Binary
 
 ```bash
-$ curl -sSL https://bit.ly/install-genome | sh
+$ curl -sSfL https://bit.ly/install-genome | sh
 # or
-$ wget -qO- https://bit.ly/install-genome | sh
+$ wget -qO-  https://bit.ly/install-genome | sh
 ```
 
 ### Source
 
 ```bash
 # use standard go tools
-$ go get -u github.com/kamilsk/genome
+$ go get github.com/kamilsk/genome@latest
 # or use egg tool
-$ egg tools add github.com/kamilsk/genome
+$ egg tools add github.com/kamilsk/genome@latest
 ```
 
-> [egg][egg.page]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
+> [egg][]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
 
 ### Bash and Zsh completions
 
@@ -67,14 +67,11 @@ $ genome completion zsh  > /path/to/zsh-completions/_genome.zsh
 
 made with ❤️ for everyone
 
-[build.icon]:       https://travis-ci.org/kamilsk/genome.svg?branch=master
 [build.page]:       https://travis-ci.org/kamilsk/genome
-
+[build.icon]:       https://travis-ci.org/kamilsk/genome.svg?branch=master
 [design.page]:      https://www.notion.so/octolab/genome-794781effdae4278ac6bc92637cbf74c?r=0b753cbf767346f5a6fd51194829a2f3
-
 [promo.page]:       https://github.com/kamilsk/genome
-
 [template.page]:    https://github.com/octomation/go-tool
 [template.icon]:    https://img.shields.io/badge/template-go--tool-blue
 
-[egg.page]:         https://github.com/kamilsk/egg
+[egg]:              https://github.com/kamilsk/egg
