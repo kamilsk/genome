@@ -4,17 +4,17 @@ github.com/davecgh/go-spew/spew
 github.com/inconshreveable/mousetrap
 # github.com/pmezard/go-difflib v1.0.0
 github.com/pmezard/go-difflib/difflib
-# github.com/spf13/cobra v0.0.6
+# github.com/spf13/cobra v1.0.0
 github.com/spf13/cobra
 # github.com/spf13/pflag v1.0.3
 github.com/spf13/pflag
 # github.com/stretchr/testify v1.5.1
 github.com/stretchr/testify/assert
-# go.octolab.org v0.0.18
+# go.octolab.org v0.0.22
 go.octolab.org/errors
 go.octolab.org/sequence
-# go.octolab.org/toolkit/cli v0.0.7
+# go.octolab.org/toolkit/cli v0.0.9
 go.octolab.org/toolkit/cli/cobra
 go.octolab.org/toolkit/cli/internal/os/shell
-# gopkg.in/yaml.v2 v2.2.2
+# gopkg.in/yaml.v2 v2.2.8
 gopkg.in/yaml.v2
