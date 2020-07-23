@@ -2,50 +2,55 @@
 project_name: genome
 
 archives:
-- id: genome
-  files:
-  - LICENSE
-  format: tar.gz
-  name_template: "{{.Binary}}_{{.Version}}_{{.Os}}-{{.Arch}}"
-  replacements:
-    386:    32bit
-    amd64:  64bit
-    darwin: macOS
-    linux:  Linux
+  - id: genome
+    files:
+      - LICENSE
+    format: tar.gz
+    name_template: "{{.Binary}}_{{.Version}}_{{.Os}}-{{.Arch}}"
+    replacements:
+      386:    32bit
+      amd64:  64bit
+      darwin: macOS
+      linux:  Linux
 
 brews:
-- name: genome
-  commit_author:
-    name:  Kamil Samigullin
-    email: kamil@samigullin.info
-  description: Build your app by DNA.
-  folder: Formula
-  homepage: https://github.com/kamilsk/genome
-  github:
-    owner: kamilsk
-    name:  homebrew-tap
-  install: |
-    bin.install "genome"
-    output = Utils.popen_read("#{bin}/genome completion bash")
-    (bash_completion/"genome").write output
-    output = Utils.popen_read("#{bin}/genome completion zsh")
-    (zsh_completion/"_genome").write output
-    prefix.install_metafiles
-  test: |
-    system "#{bin}/genome --version"
+  - name: genome
+      caveats:
+    commit_author:
+      name:  Kamil Samigullin
+      email: kamil@samigullin.info
+    description: Build your app by DNA.
+    folder: Formula
+    homepage: https://github.com/kamilsk/genome
+    github:
+      owner: kamilsk
+      name:  homebrew-tap
+    install: |
+      bin.install "genome"
+      output = Utils.popen_read("#{bin}/genome completion bash")
+      (bash_completion/genome).write output
+      output = Utils.popen_read("#{bin}/genome completion zsh")
+      (zsh_completion/_genome).write output
+      prefix.install_metafiles
+    test: |
+      system "#{bin}/genome version"
 
 builds:
-- binary: genome
-  env:
-  - CGO_ENABLED=0
-  goarch:
-  - 386
-  - amd64
-  goos:
-  - darwin
-  - linux
-  ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
-  main: .
+  - id: genome
+    binary: genome
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    goarch:
+      - 386
+      - amd64
+    goos:
+      - darwin
+      - linux
+    ldflags:
+      - -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
+    main: .
 
 checksum: { name_template: checksums.txt }
 
