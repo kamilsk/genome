@@ -15,7 +15,7 @@ archives:
 
 brews:
   - name: genome
-      caveats:
+    caveats:
     commit_author:
       name:  Kamil Samigullin
       email: kamil@samigullin.info

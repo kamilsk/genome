@@ -4,6 +4,7 @@
 
 [![Build][build.icon]][build.page]
 [![Template][template.icon]][template.page]
+[![Coverage][coverage.icon]][coverage.page]
 
 ## 💡 Idea
 
@@ -17,7 +18,7 @@ life:
 YAML
 ```
 
-Full description of the idea is available [here][design.page].
+A full description of the idea is available [here][design.page].
 
 ## 🏆 Motivation
 
@@ -38,10 +39,12 @@ $ brew install kamilsk/tap/genome
 ### Binary
 
 ```bash
-$ curl -sSfL https://bit.ly/install-genome | sh
+$ curl -sSfL https://raw.githubusercontent.com/kamilsk/genome/master/bin/install | sh
 # or
-$ wget -qO-  https://bit.ly/install-genome | sh
+$ wget -qO-  https://raw.githubusercontent.com/kamilsk/genome/master/bin/install | sh
 ```
+
+> Don't forget about [security](https://www.idontplaydarts.com/2016/04/detecting-curl-pipe-bash-server-side/).
 
 ### Source
 
@@ -52,16 +55,18 @@ $ go get github.com/kamilsk/genome@latest
 $ egg tools add github.com/kamilsk/genome@latest
 ```
 
-> [egg][]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
+> [egg][] is an `extended go get`.
 
 ### Bash and Zsh completions
 
 ```bash
 $ genome completion bash > /path/to/bash_completion.d/genome.sh
 $ genome completion zsh  > /path/to/zsh-completions/_genome.zsh
+# or autodetect
+$ source <(genome completion)
 ```
 
-<sup id="egg">1</sup> The project is still in prototyping.[↩](#anchor-egg)
+> See `kubectl` [documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#enabling-shell-autocompletion).
 
 ---
 
@@ -69,6 +74,8 @@ made with ❤️ for everyone
 
 [build.page]:       https://travis-ci.org/kamilsk/genome
 [build.icon]:       https://travis-ci.org/kamilsk/genome.svg?branch=master
+[coverage.page]:    https://codeclimate.com/github/kamilsk/genome/test_coverage
+[coverage.icon]:    https://api.codeclimate.com/v1/badges/84c6304d86e11c264bff/test_coverage
 [design.page]:      https://www.notion.so/octolab/genome-794781effdae4278ac6bc92637cbf74c?r=0b753cbf767346f5a6fd51194829a2f3
 [promo.page]:       https://github.com/kamilsk/genome
 [template.page]:    https://github.com/octomation/go-tool
